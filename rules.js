@@ -57,5 +57,4 @@ class End extends Scene {
 
 Engine.load(Start, 'myStory.json');
 
-
-//partner Dylan Boyer for fxing
+//partner Dylan Boyer for part a
