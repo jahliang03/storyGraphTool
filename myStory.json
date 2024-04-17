@@ -1,58 +1,221 @@
 {
-    "Title": "Campus Life on the West Side",
-    "Credits": "Created by Adam Smith (amsmith@ucsc.edu).",
-    "InitialLocation": "Kresge",
+    "Title": "My Haunted House",
+    "Credits": "Project by Jasmine Liang, Created by Adam Smith (amsmith@ucsc.edu).",
+    "InitialLocation": "Prologue",
+
     "Locations": {
-        "Kresge": {
-            "Body": "This is Kresge College, lots of nice trees.",
-            "Choices": [
+        "Prologue":{
+            "Body": "Welcome home! It's been years since you've visited, let's get you reaquainted with your late grandmothers home. It is yours now that you've inherited it.",
+            "Choices":[
                 {
-                    "Text": "South",
-                    "Target": "Porter"
+                "Text": "Open door",
+                "Target": "Living Room"
                 }
             ]
         },
-        "Porter": {
-            "Body": "This is Porter College, the trees are nice here too.",
+        "Living Room": {
+            "Body": "You walk into the spacious living room decorated with antique furniture. Most of this room is decorated with items from your grandmothers travels over the years.",
             "Choices": [
                 {
-                    "Text": "North",
-                    "Target": "Kresge"
+                    "Text": "Enter Library",
+                    "Target": "Library"
                 },
                 {
-                    "Text": "South",
-                    "Target": "Rachel Carson"
+                    "Text": "Enter Kitchen",
+                    "Target": "Kitchen"
                 }
             ]
         },
-        "Rachel Carson": {
-            "Body": "Rachel Carson College, more sun and fewer trees.",
+        "Library":{
+            "Body": "The library is a brightly lit room filled with shelves after shelves of books. Some of the books you need to climb up the loft to reach.",
             "Choices": [
                 {
-                    "Text": "North",
-                    "Target": "Porter"
-                },
+                    "Text": "Explore deeper into the library",
+                    "Target": "Deeper into Library"
+                }, 
                 {
-                    "Text": "South",
-                    "Target": "Oakes"
+                    "Text": "Go back to living room",
+                    "Target": "Living Room"
                 }
             ]
         },
-        "Oakes": {
-            "Body": "Oakes College, even the buildings have tree bark on them.",
+        "Deeper into Library":{
+            "Body":  "You walk deeper into the library in awe of the collection of books. As you walk past two of the shelves, you hear a strange noise...",
             "Choices": [
                 {
-                    "Text": "North",
-                    "Target": "Rachel Carson"
-                },
+                    "Text": "Inspect",
+                    "Target": "Inspect"
+                }, 
                 {
-                    "Text": "South",
-                    "Target": "Beyond"
+                    "Text": "Go back to Living Room",
+                    "Target": "Living Room"
                 }
             ]
         },
-        "Beyond": {
-            "Body": "Grass, don't forget to check for ticks!"
+        "Inspect":{
+            "Body": "*rumble* *rumble* it's as if...someone's banging on the other side of the wall. There's a book shelf in the way.",
+            "Choices": [
+                {
+                    "Text": "Move Shelf",
+                    "Target": "Move Shelf"
+
+                }, 
+                {
+                    "Text": "Leave Room",
+                    "Target": "Living Room"
+                }
+            ]
+        },
+        "Move Shelf":{
+            "Body": "You try to move the self and it doesn't budge. As you tug, a book falls out. You pick it up to put it back and you notice a keyhole on the shelf where the book was.",
+            "Choices": [
+                {
+                    "Text": "Open Lock",
+                    "Target": "Unlock Secret Room" 
+                    
+                }, 
+                {
+                    "Text": "Leave Room",
+                    "Target": "Living Room"
+                }
+            ]
+        },
+        "Unlock Secret Room": {
+            "Body": "You use the ornate little key to unlock the keyhole on the bookshelf. The shelf swings open, revealing a secret room behind it. What mysteries lie ahead?",
+            "Choices": [
+                {
+                    "Text": "Enter Secret Room",
+                    "Target": "Secret Room"
+                },
+                {
+                    "Text": "Go back to Living Room",
+                    "Target": "Living Room"
+                }
+            ]
+        },
+        "Secret Room": {
+            "Body": "You have entered the secret room. It's filled with mysterious objects and relics from the past. Explore and uncover the secrets hidden here as you keep playing. This is the end of your tour for now.",
+            "Choices": [
+                {
+                    "Text": "Walk out of room",
+                    "Target": "End"
+                }
+            ]
+        },
+        "Kitchen": {
+            "Body": "This is the kitchen. The maids have left the pantry stocked with food and you can still use the ingredients in the cabinets.",
+            "Choices": [
+                {
+                    "Text": "Walk around kitchen",
+                    "Target": "In Kitchen"
+                },
+                {
+                    "Text": "Go up staircase",
+                    "Target": "Hallway"
+                }, 
+                {
+                    "Text": "Go out to the garden",
+                    "Target": "Garden"
+                },
+                {
+                    "Text": "Go back to Living Room",
+                    "Target": "Living Room"
+                }
+            ]
+        },
+        "In Kitchen": {
+            "Body": "You walk around the kitchen and glance over at the dining area. Something shiny catches your eye.",
+            "Choices": [
+                {
+                    "Text": "Walk over to it",
+                    "Target": "Walk Over"
+                }
+            ]
+        },
+        "Walk Over": {
+            "Body": "You walk towards a glass display case filled with peculiar trinkets. You reach for the shiny silver trinket box.",
+            "Choices": [
+                {
+                    "Text": "Open box",
+                    "Target": "Open Box"
+                }
+            ]
+        },
+        "Open Box": {
+            "Body": "You open the box and inside rests an ornate little key. You put the key in your pocket, it might come in useful later.",
+            "Choices": [
+                {
+                    
+                    "Text": "Put key in pocket",
+                    "Target": "Kitchen",
+                    "keyObtained": true
+                }
+            ]
+        },
+
+        "Garden": {
+            "Body": "You open the glass doors and you're greeted by the scent of fresh roses and botanical plants. You see a fountain in the middle of the courtyard. This will be a good spot to read.",
+            "Choices": [
+                {
+                    "Text": "Go back to kitchen",
+                    "Target": "Kitchen"
+                }
+            ]
+        },
+        "Hallway": {
+            "Body": "The second floor consists of two bedrooms and a bathroom.",
+            "Choices": [
+                {
+                    "Text": "Enter Master Bedroom",
+                    "Target": "Master Bedroom"
+                },
+                {
+                    "Text": "Enter Guest Bedroom",
+                    "Target": "Guest Bedroom"
+                },
+                {
+                    "Text": "Enter Bathroom",
+                    "Target": "Bathroom"
+                },
+                {
+                    "Text": "Downstairs",
+                    "Target": "Kitchen"
+                }
+            ]
+        },
+
+        "Master Bedroom":{
+            "Body": "This is the Grand Master Bedroom, where you'll be staying. It might not be decorated to your taste now but we can work on that later.",
+            "Choices": [
+                {
+                    "Text": "Leave Master Bedroom",
+                    "Target": "Hallway"
+                }
+            ]   
+        },
+        "Guest Bedroom":{
+            "Body": "This is the guest bedroom. I advise you to be cautious of who you invite over.",
+            "Choices": [
+                {
+                    "Text": "Leave Guest Bedroom",
+                    "Target": "Hallway"
+                }
+            ]   
+        },
+
+        "Bathroom":{
+            "Body": "This is the bathroom, it's filled with luxurious soaps and all the ammenties you will need.",
+            "Choices": [
+                {
+                    "Text": "Leave Bathroom",
+                    "Target": "Hallway"
+                }
+            ]   
+        },
+        "End":{
+            "Body": "In shock, you walk out of the room and the shelf immediately closes. You will uncover more secrets soon."
         }
     }
+
+
 }
